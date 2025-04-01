@@ -5,119 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTT Subscriptions Store</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: #ffffff;
-            text-align: center;
-        }
-        header {
-            background: #1f1f1f;
-            padding: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        #hero {
-            padding: 50px;
-            background: url('hero-banner.jpg') no-repeat center center/cover;
-            color: white;
-        }
-        #hero button {
-            background: #ffcc00;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-        #plans {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 60px 40px;
-        }
-        .plan {
-            background: #1f1f1f;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
-            position: relative;
-        }
-        .plan:hover {
-            transform: scale(1.05);
-        }
-        .plan img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-        }
-        .plan h3 {
-            color: #ffcc00;
-            font-size: 24px;
-        }
-        .plan .price {
-            background: #ff5733;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 50px;
-            display: inline-block;
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0px 4px 15px rgba(255, 87, 51, 0.6);
-            text-transform: uppercase;
-        }
-        .plan button {
-            background: #ffcc00;
-            border: none;
-            padding: 10px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-            border-radius: 25px;
-            transition: background 0.3s;
-        }
-        .plan button:hover {
-            background: #ffaa00;
-        }
-        footer {
-            background: #1f1f1f;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .testimonials {
-            background: #222;
-            padding: 40px;
-            margin-top: 20px;
-        }
-        .testimonial {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -131,41 +18,144 @@
             </ul>
         </nav>
     </header>
+
     <section id="hero">
         <h2>Get Premium OTT Subscriptions</h2>
         <p>Best streaming services at unbeatable prices.</p>
         <button>Explore Plans</button>
     </section>
+
     <section id="plans">
         <div class="plan">
-            <img src="data:image/png;base64,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" alt="YouTube Premium">
-            <span class="price">YOUTUBE PREMIUM</span>
-            <h3></h3>
+            <div class="price-tag">$11.99 <span>/ month</span></div>
+            <img src="data:image/png;base64,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" alt="YouTube Premium">
+            <h3>YouTube Premium</h3>
             <p>Ad-free experience with exclusive content.</p>
-            <button>99/- INR (1 MONTH)</button>
+            <button>Buy Now</button>
         </div>
         <div class="plan">
-            <img src="data:image/png;base64,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" alt="Amazon Prime">
-            <span class="price">AMAZON PRIME </span>
-            <h3></h3>
+            <div class="price-tag">$14.99 <span>/ month</span></div>
+            <img src="data:image/png;base64,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" alt="Amazon Prime">
+            <h3>Amazon Prime</h3>
             <p>Movies, TV shows, and fast delivery benefits.</p>
             <button>Buy Now</button>
         </div>
         <div class="plan">
-            <img src="https://gateway-fiber.transforms.svdcdn.com/production/images/site/Netflix-Brand-Logo.png?w=600&auto=compress%2Cformat&fit=crop&dm=1661783887&s=acf81ec5587b8b4aa64e62163b9cbdde" alt="Netflix Premium">
-            <span class="price">$19.99/month</span>
+            <div class="price-tag">$19.99 <span>/ month</span></div>
+            <img src="data:image/png;base64,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" alt="Netflix Premium">
             <h3>Netflix Premium</h3>
             <p>Unlimited movies and shows in Ultra HD.</p>
             <button>Buy Now</button>
         </div>
     </section>
-    <section class="testimonials" id="testimonials">
-        <h2>User Reviews</h2>
-        <p class="testimonial">"Great service! Got my subscription instantly." - John D.</p>
-        <p class="testimonial">"Affordable prices and excellent support." - Sarah L.</p>
-    </section>
+
     <footer>
         <p>&copy; 2025 OTT Subscriptions Store. All Rights Reserved.</p>
     </footer>
+    <style>
+      /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+header {
+    background: #1f1f1f;
+    padding: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 18px;
+}
+#hero {
+    padding: 50px;
+    background: url('hero-banner.jpg') no-repeat center center/cover;
+    color: white;
+}
+#hero button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Plans Section */
+#plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 40px;
+}
+.plan {
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+}
+.plan:hover {
+    transform: scale(1.05);
+}
+
+/* New Price Tag Design - Top Left Ribbon */
+.price-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #ffcc00, #ff9500);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.5);
+    text-transform: uppercase;
+}
+.price-tag span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #222;
+}
+
+/* Plan Button */
+.plan button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+.plan button:hover {
+    background: #ffaa00;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+    </style>
 </body>
 </html>
